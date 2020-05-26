@@ -12,7 +12,7 @@ int main()
 {
 	int vector[100],size_vector=100;
     int i;
-    int suma=0,contador=0;
+    int contador=0;
 
 	setlocale (LC_CTYPE, "Spanish");
 
