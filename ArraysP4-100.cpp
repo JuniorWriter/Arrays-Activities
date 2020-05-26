@@ -34,7 +34,6 @@ int main()
             }
             
         }
-        int show=vector[3];
         cout<<"\n\nEl resultado de la suma de los 100 primeros números pares es "<<suma<<"\n\n";
     
 	system("pause");
