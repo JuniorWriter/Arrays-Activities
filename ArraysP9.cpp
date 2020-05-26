@@ -29,16 +29,16 @@ int main()
     }
 	cout<<"\n";
 
-    //Organizar el vector de menor a mayor.
-    for ( i = 0; i < size_vector; i++)
+    //Organizar el vector de menor a mayor//
+    for ( i = 0; i < size_vector; i++) //TODO: For para recorrer el vector desde el comienzo
     {
-        for ( j = i+1; j < size_vector; j++)
+        for ( j = i+1; j < size_vector; j++) //TODO: For para recorrer el vector, un paso más que el anterior
         {
-            if (vector3[i]>vector3[j])
+            if (vector3[i]>vector3[j]) //Comparamos si el número es mayor que el siguiente
             {
-                aux=vector3[i];
-                vector3[i]=vector3[j];
-                vector3[j]=aux;
+                aux=vector3[i]; //TODO: Variable auxiliar para almacenar el valor del número mayor en el vector temporalmente
+                vector3[i]=vector3[j]; // Sobrescribimos el valor en el siguiente
+                vector3[j]=aux; //Por último le damos el valor para el cambio de ordenamiento
             }
             
         }
