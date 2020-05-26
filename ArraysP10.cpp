@@ -32,7 +32,7 @@ int main()
             }
             
         }
-		cout<<"\n";    
+		cout<<"\n\n";    
     
 	system("pause");
 	return 0;
