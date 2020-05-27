@@ -41,16 +41,19 @@ int main()
     
     for ( i = 0; i < contador; i++)
     {
-        cout<<primos[i];
-        comas++;
+        if(primos[i]!=25)
+        {   
+            cout<<primos[i];
+            comas++;
 
-        if(comas<contador)
-        {
-            cout<<", ";
-        }
-        else
-        {
-            cout<<".";
+            if(comas<contador-1)
+            {
+                cout<<", ";
+            }
+            else
+            {
+                cout<<".";
+            }
         }
         
     }
