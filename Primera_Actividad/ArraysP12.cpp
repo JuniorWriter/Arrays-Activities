@@ -10,35 +10,52 @@ using namespace std;
 
 int main()
 {
-    int primo=0, size=100;
-    int i=1,j=1;
+    int primos[100];
+    int i=1, j=1;
+    int divisores=0, contador=0, comas=0, size=100;
 
-    for ( i = 1; size >= i; i++)
+    for ( i = 2; size >= i; i++)
     {
-        for ( j = 1; i >= j; j++)
+        for (j = 2; i >= j; j++)
         {
             if (i%j==0)
             {
-                primo++;
+                divisores++;
             }
             
         }
 
-        if (primo==2)
+        if (divisores<=2)
         {
-            cout<<i<<" ";
+            primos[contador]=i;
+            contador++;
         }
         else
         {
-            primo=0;
-        }
-        
+            divisores=0;
+        }  
         
     }
-    
 
-    cout<<"\n\n";    
+    cout<<"\n\n";
     
-	system("pause");
-	return 0;
+    for ( i = 0; i < contador; i++)
+    {
+        cout<<primos[i];
+        comas++;
+
+        if(comas<contador)
+        {
+            cout<<", ";
+        }
+        else
+        {
+            cout<<".";
+        }
+        
+    }
+    cout<<"\n\n";
+
+    system("pause");
+    return 0;
 }
