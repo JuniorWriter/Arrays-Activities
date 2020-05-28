@@ -1,5 +1,4 @@
 #include <iostream>
-#include <conio.h>
 #include <stdlib.h>
 #include <wchar.h>
 #include <locale.h>
@@ -16,7 +15,9 @@ int main()
 
     for ( i = 2; size >= i; i++)
     {
-        for (j = 2; i >= j; j++)
+        divisores=0;
+
+        for (j = 1; i >= j; j++)
         {
             if (i%j==0)
             {
@@ -29,10 +30,6 @@ int main()
         {
             primos[contador]=i;
             contador++;
-        }
-        else
-        {
-            divisores=0;
         }  
         
     }
@@ -41,19 +38,17 @@ int main()
     
     for ( i = 0; i < contador; i++)
     {
-        if(primos[i]!=25)
-        {   
-            cout<<primos[i];
-            comas++;
+         
+        cout<<primos[i];
+        comas++;
 
-            if(comas<contador-1)
-            {
-                cout<<", ";
-            }
-            else
-            {
-                cout<<".";
-            }
+        if(comas<contador)
+        {
+            cout<<", ";
+        }
+        else
+        {
+            cout<<".";
         }
         
     }
