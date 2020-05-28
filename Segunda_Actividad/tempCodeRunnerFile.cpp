@@ -1,1 +1,1 @@
-\n
+system("cls");
