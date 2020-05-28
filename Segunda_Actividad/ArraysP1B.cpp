@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     float numeros[10], mayores[10];
-    float suma, promedio;
+    float suma=0, promedio;
     int i;
     int opc, size_vector;
 
@@ -15,6 +15,8 @@ int main()
 
     do
     {
+        suma=0;
+        
         cout<<"Ingrese el tamaño del vector: ";
         cin>>size_vector;
 
