@@ -10,7 +10,7 @@ using namespace std;
 
 int main()
 {
-	int vector[100],size_vector=0;
+	int vector[10],size_vector=0;
     int i;
     int buscador=0,contador=0,exist=0;
 
@@ -26,7 +26,7 @@ int main()
     }
 
     cout<<"\n\n";
-    cout<<"BUSCAR VALOR.\n-Ingrese una posición: ";
+    cout<<"BUSCAR VALOR.\n-Ingrese una posición [0-"<<size_vector-1<<"]: ";
     cin>>buscador;
 
     for ( i = 0; i < size_vector; i++)
@@ -45,6 +45,8 @@ int main()
     }
     else
     {
+        system("cls");
+        system("color 4f");
         cout<<"\nEl número no se encuentre en el vector.\n\n";
     }
 
