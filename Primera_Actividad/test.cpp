@@ -1,5 +1,4 @@
 #include <iostream>
-#include <conio.h>
 #include <stdlib.h>
 #include <wchar.h>
 #include <locale.h>
@@ -9,39 +8,39 @@
 using namespace std;
 
 int main()
-{   
-    int vector[100];
-    int primo=0, size=100;
-    int i=1,j=1;
+{
+    int num;
+    int i=1, j=1;
+    int divisores=0, contador=0, size=100;
 
-    for ( i = 1; size >= i; i++)
+    do
     {
-        for ( j = 1; i >= j; j++)
+        divisores=0;
+        cout<<"Ingrese un número (25): ";
+        cin>>num;
+        for ( i = 1; i <= num+1; i++)
         {
-            if (i%j==0)
+            if (num%i==0)
             {
-                primo++;
+                divisores++;
             }
             
         }
+        cout<<"\n\n";
 
-        if (primo==2)
+        if ((divisores<=2)&&(num>1))
         {
-            vector[i]=i;
+            cout<<"Número primo!";
         }
         else
         {
-            primo=0;
+            cout<<"Una polla";
         }
-
-        cout<<vector[i]<<" ";
         
-    }
+        cout<<"\n\n";
 
-    
+    }while(num!=0);
 
-    cout<<"\n\n";    
-    
-	system("pause");
-	return 0;
+    system("pause");
+    return 0;
 }
