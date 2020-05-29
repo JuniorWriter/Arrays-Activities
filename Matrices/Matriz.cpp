@@ -1,4 +1,4 @@
-/*1. Hacer un programa para rellenar una matriz pidiendo al usuario el n�mero de filas
+/*1. Hacer un programa para rellenar una matriz pidiendo al usuario el número de filas
 y columnas, Posteriormente mostrar la matriz en pantalla.*/
 
 #include <iostream>
@@ -21,7 +21,7 @@ int main()
 	cout<<"Digite el número de columnas: ";
 	cin>>columnas;
 	
-	for( f=0; f < filas; f++) //TODO: Rellenando la matriz
+	for( f=0; f < filas; f++) //TODO: Rellenar la matriz
 	{
 		for( c=0; c < columnas; c++)
 		{
