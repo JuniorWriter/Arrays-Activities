@@ -1,4 +1,7 @@
-/*2.Que rellene una matrizcon los 100 primeros números pares y muestre su suma.*/
+/*Author: Andrés Felipe Galván
+	Date: 02/06/2020
+	Description:Que rellene una matrizcon los 100 primeros números pares y muestre su suma.
+*/
 
 #include <iostream>
 #include <conio.h>
@@ -16,7 +19,7 @@ using namespace std;
 
 int main()
 {
-    int vector[50][50];
+    int matriz[50][50];
     int suma=0;
     int filas=10, columnas=10;
     int f=0, c=0, i=0;
@@ -30,7 +33,7 @@ int main()
     {
         for ( c = 0; c < columnas; c++)
         {
-            vector[f][c]=i++*2+2;
+            matriz[f][c]=i++*2+2;
         }
         
     }
@@ -39,8 +42,8 @@ int main()
     {
         for ( c = 0; c < columnas; c++)
         {
-            cout<<"\t"<<vector[f][c];
-            suma+=vector[f][c];
+            cout<<"\t"<<matriz[f][c];
+            suma+=matriz[f][c];
         }
         JUMP;
     }
