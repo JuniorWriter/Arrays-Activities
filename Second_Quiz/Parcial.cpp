@@ -16,7 +16,7 @@ using namespace std;
 
 int main()
 {
-    int matriz[10][10], peso[10][10], precio[10][10];
+    float matriz[10][10], peso[10][10], precio[10][10];
     int suma=0, extra=0, extra_pes=0;
     int filas=5, columnas=2, size=5;
     int f, c, i, col;
@@ -28,6 +28,7 @@ int main()
     cout<<"\t\t\tENVIOS UPC\n";
     cout<<"\t\t   -------------------\n\n";
     
+    //TODO: Leer los pesos de los paquetes
     cout<<"Ingrese el peso de los paquetes (Kg): ";JUMP;JUMP;
     for ( f = 0, i = 0; f < filas; f++)
     {
@@ -38,17 +39,24 @@ int main()
             cin>>peso[f][c];
             matriz[f][c]=peso[f][c];
             ///////////////////////////////////////
-            precio[f][c]=peso[f][c];
-            if ((peso[f][c]>=0)&&(peso[f][c]<10))
+            if(peso[f][c]>=0)
             {
-                precio[f][c]=12000;
+                if (peso[f][c]<10)
+                {
+                    precio[f][c]=12000; // valor constante para los pesos desde 0 hasta 9 kg
+                }
+                else
+                {
+                    extra_pes=peso[f][c]-10; //Restarle 10 para excluir los 10 primeros kilos
+                    extra=extra_pes*750; // Multiplicar 750 x el número de kilos extras
+                    precio[f][c]=12000+extra; // sumarle al resultado el precio extra
+                }
             }
             else
             {
-                extra_pes=peso[f][c]-10;
-                extra=extra_pes*750;
-                precio[f][c]=12000+extra;
-            } 
+                precio[f][c]=0;
+            }
+            
         }    
     }
     
@@ -57,10 +65,11 @@ int main()
     {
         for ( c = 1, col=0; c < columnas, col < columnas-1; c++, col++)
         {
-            matriz[f][c]=precio[f][col];
+            matriz[f][c]=precio[f][col]; // Asignarle la segunda columna de precios
         }
     }
 
+    //TODO: Mostrar la matriz
     JUMP;
     cout<<"\tPESO.\tPRECIO.\n";
     JUMP;
