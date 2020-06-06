@@ -91,7 +91,7 @@ int main()
     {
         for ( c = 0; c < columnas; c++)
         {
-            matriz[f][c]=vector[i];i++; //Los valores del vector los mostramos organizados en la matriz
+            matriz[f][c]=vector[i]*2;i++; //Los valores del vector los mostramos organizados en la matriz
             cout<<"\t"<<matriz[f][c];
         }
         JUMP;
