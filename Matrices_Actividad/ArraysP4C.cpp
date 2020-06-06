@@ -49,7 +49,7 @@ int main()
     //Buscar término por posición o por valor.
     cout<<"\n\n\nBUSCAR.\n";
     cout<<"Por posición...........(1)\n";
-    cout<<"Por valor..............(2)\n\n";
+    cout<<"Por valor...............(2)\n\n";
     cout<<"> ";cin>>opc;
 
     JUMP;
