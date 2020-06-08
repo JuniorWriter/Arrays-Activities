@@ -16,7 +16,7 @@ using namespace std;
 
 int main()
 {
-    float matriz[30][30], matriz2[30][30], peso[30][30], precio[30][30];
+    float peso[30][30], precio[30][30];
     float peso_vector[4], precio_vector[4];
     float total_peso=0, total_precio=0, total_total=0;
     float suma=0, extra=0, extra_pes=0;
@@ -41,12 +41,10 @@ int main()
         JUMP;JUMP;
         cout<<"Ingrese el peso de los paquetes (Kg):";
         JUMP;
-        for ( c = 0, col = 1, j = 1; c < 5, col < columnas-1; c++, col++)
+        for ( c = 1, j = 1; c < 6; c++)
         {
             cout<<j<<". ";j++;
             cin>>peso[f][c];
-
-            matriz[f][col]=peso[f][c];
 
             ///////////////////////////////////////
             if(peso[f][c]>=0)
@@ -66,7 +64,6 @@ int main()
             {
                 precio[f][c]=0;
             }
-            matriz2[f][col]=precio[f][c];
 
             total_peso+=peso[f][c];
             total_precio+=precio[f][c];
@@ -77,24 +74,25 @@ int main()
 
     
 
-
+    //Columna de pesos y precios para cada matriz
     for ( f = 0; f < filas; f++)
     {
         for ( c = 6; c < columnas; c++)
         {
-            matriz[f][c]=peso_vector[f];
+            peso[f][c]=peso_vector[f];
 
-            matriz2[f][c]=precio_vector[f];
+            precio[f][c]=precio_vector[f];
             total_total+=precio_vector[f];
         }
     }
 
+    //Empleado
     for ( f = 0, i=1; f < filas; f++)
     {
         for ( c = 0; c < 1; c++)
         {
-            matriz2[f][c]=i;
-            matriz[f][c]=i;
+            precio[f][c]=i;
+            peso[f][c]=i;
             i++;
         }
     }
@@ -106,7 +104,7 @@ int main()
     {
         for ( c = 0; c < columnas; c++)
         {
-            cout<<"\t"<<matriz[f][c];
+            cout<<"\t"<<peso[f][c];
         }
         JUMP;
     }
@@ -121,7 +119,7 @@ int main()
     {
         for ( c = 0; c < columnas; c++)
         {
-            cout<<"\t"<<matriz2[f][c];
+            cout<<"\t"<<precio[f][c];
         }
         JUMP;
     }
