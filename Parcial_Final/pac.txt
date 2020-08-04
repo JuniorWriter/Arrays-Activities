@@ -1,0 +1,4 @@
+Description: En un restaurante de 2 pisos hay 8 mesas en cada piso. Cada día a la hora del almuerzo las personas llegan
+ a ocupar una mesa que puede ser de 1 hasta 6 personas por mesa. El administrador desea saber en algún momento cual mesa
+ está libre, cuantas personas hay en cada mesa, cuantas personas se encuentran en cada piso y el promedio de personas
+ por piso. Desearía ordenar las mesas en cada piso por el número de ocupantes en la mesa.
